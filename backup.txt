@@ -1,0 +1,24 @@
+from django.shortcuts import render
+
+# Create your views here.
+def menu(request):
+    return render(request, 'PortfólioApp/portfolio.html', None)
+
+
+
+CORES:
+#0D1117 
+#010813
+#03031d
+#192435ff
+#142a66
+#cad2e4
+#ecbe13 ---- excluida
+
+linear-gradient(427.5deg, #0D1117 0%, #142a66 100%);
+
+background: linear-gradient(135deg, #374151 0%, #1f2937 100%); - gradiente das tecnologias
+
+GIF IMAGEM ESTATICA NA DIV DENTRO *HTML*
+style="background-image: url('{% static 'image/gif-azul-vertical.jfif' %}')
+
