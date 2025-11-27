@@ -74,12 +74,13 @@ html {
 .logo-icon {
     width: 40px;
     height: 40px;
-    background: linear-gradient(135deg, #22c55e, #16a34a);
+    background-color: #142a66;
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
+    border: 1px solid #e5e7eb;
 }
 
 .logo-icon.small {
@@ -459,6 +460,7 @@ html {
     max-width: 64rem;
     margin: 0 auto;
 
+    
 }
 @media (max-width: 768px) {
 
@@ -678,7 +680,7 @@ html {
 
 @media (min-width: 768px) {
     .section-title-team{
-
+        border-radius: 8px;
         align-items: center;
         font-size: 1rem;
         font-weight: 700;
@@ -703,7 +705,7 @@ html {
     align-items: center;
     display: flex;
     display: flex;
-
+    border-radius: 8px;
     font-size: 2rem;
     font-weight: 700;
     background-color: #cad2e4;
@@ -809,8 +811,9 @@ html {
 .cta-title {
     font-size: 2rem;
     font-weight: 700;
-    color: #142a66;
+    color: #cad2e4;
     margin-bottom: 1rem;
+    text-decoration: solid;
 }
 
 @media (min-width: 768px) {
@@ -877,7 +880,12 @@ html {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+.logo-text-footer{
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #cad2e4;
 }
 
 .footer-contact {
