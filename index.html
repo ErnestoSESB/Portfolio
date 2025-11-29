@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfólio</title>
+
+<!-- Favicon SVG embutido -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'>
+<circle cx='100' cy='100' r='100' fill='black'/>
+<text x='50%' y='55%' text-anchor='middle' font-size='110' fill='white' font-family='Arial'>S</text>
+</svg>">
+
+<style>
 /* ===========================
    Landing Page Specific Styles
    =========================== */
@@ -931,3 +946,184 @@ html {
         grid-template-columns: 1fr;
     }
 }
+
+</style>
+
+</head>
+<body class="landing-page">
+
+<header class="landing-header" id="header">
+    <nav class="nav landing-container">
+        <div class="nav-logo">SE</div>
+        <div class="nav-menu" id="nav-menu">
+            <a href="#home" class="nav-link">Início</a>
+            <a href="#features" class="nav-link">Tecnologias</a>
+            <a href="#project" class="nav-link">Projetos</a>
+            <a href="#about" class="nav-link">Curiosidades</a>
+        </div>
+        <button class="nav-toggle" id="nav-toggle"><span class="nav-toggle-icon"></span></button>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1 class="hero-title">Silvio Ernesto</h1>
+            <p class="hero-description">
+                “O ser humano é, por natureza, amante do conhecimento.” — Aristóteles —
+            </p>
+            <div class="hero-buttons">
+                <a href="#project" class="landing-btn landing-btn-primary">Projetos</a>
+                <a href="#features" class="landing-btn landing-btn-secondary">Tecnologias</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="image/perfil.png" alt="Perfil" class="feeder-image">
+            <p>Dev FullStack | Junior</p>
+            <p>Técnico pelo IFRN - 2025 </p>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider-page"></div>
+
+<section class="features" id="features">
+    <h2 class="section-title light">Tecnologias</h2>
+    <div class="features-grid">
+        <div class="feature-card">
+            <h3 class="feature-title">Python</h3>
+            <p class="feature-description">Linguagem de programação de alto nível, versátil e legível para diversos propósitos.</p>
+        </div>
+        <div class="feature-card">
+            <h3 class="feature-title">C++</h3>
+            <p class="feature-description">Linguagem de programação de propósito geral com foco em performance e controle de recursos.</p>
+        </div>
+        <div class="feature-card">
+            <h3 class="feature-title">PHP</h3>
+            <p class="feature-description">Linguagem de script do lado do servidor para desenvolvimento web.</p>
+        </div>
+        <div class="feature-card">
+            <h3 class="feature-title">Java</h3>
+            <p class="feature-description">Linguagem de programação orientada a objetos e independente de plataforma.</p>
+        </div>
+        <div class="feature-card">
+            <h3 class="feature-title">Typescript</h3>
+            <p class="feature-description">Superset do JavaScript com tipagem estática opcional.</p>
+        </div>
+        <div class="feature-card">
+            <h3 class="feature-title">JavaScript</h3>
+            <p class="feature-description">Linguagem de programação versátil para páginas web interativas.</p>
+        </div>
+        <div class="feature-card">
+            <h3 class="feature-title">CSS3</h3>
+            <p class="feature-description">Linguagem de estilo para definir a aparência visual de páginas web.</p>
+        </div>
+        <div class="feature-card">
+            <h3 class="feature-title">HTML5</h3>
+            <p class="feature-description">Linguagem de marcação para estruturar conteúdo web.</p>
+        </div>
+        <div class="feature-card">
+            <h3 class="feature-title">Figma</h3>
+            <p class="feature-description">Ferramenta de design UI/UX baseada em nuvem, com colaboração em tempo real.</p>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider-page"></div>
+
+<section class="project" id="project">
+    <h2 class="section-title">Meus Projetos</h2>
+
+    <div class="project-card">
+        <h3>SmartFeeder</h3>
+        <p>Sistema de alimentação automática para animais de estimação desenvolvido como projeto de TCC.</p>
+        <img src="image/App_receita.png" alt="SmartFeeder" class="project-image">
+    </div>
+
+    <div class="project-card">
+        <h3>Cronograma Enem</h3>
+        <p>Projeto acadêmico para planejamento de estudos do ENEM.</p>
+        <img src="image/Enem-cronograma1.png" alt="Enem-Cronograma" class="project-image">
+    </div>
+
+    <div class="project-card">
+        <h3>SmartFeeder Dashboard</h3>
+        <p>Controle, monitoramento e registro das atividades do alimentador via interface web.</p>
+        <img src="image/SmartFeeder-Dashboard.png" alt="Dashboard SmartFeeder" class="project-image">
+    </div>
+</section>
+
+<div class="section-divider-page"></div>
+
+<section class="about" id="about" style="background-image: url('image/interface.gif'); background-size: cover;">
+    <h2>Quem eu sou</h2>
+    <div class="team-card">
+        <h3>Sílvio Ernesto</h3>
+        <p>Pesquisador | Desenvolvedor FullStack Junior</p>
+        <p>Formado pelo IFRN, 4 anos de experiência em Tecnologia, proficiência em Python, Java, JavaScript e mais.</p>
+    </div>
+    <p>Valorizo clareza, responsabilidade e aprendizado contínuo. Ética e resultados reais são meu foco.</p>
+</section>
+
+<div class="section-divider-page"></div>
+
+<section class="cta" id="contato">
+    <h2>Meus contatos</h2>
+    <p>Fale diretamente comigo nos canais abaixo!</p>
+</section>
+
+<div class="section-divider"></div>
+<footer class="footer">
+    <p>© 2025 Desenvolvido por Sílvio Ernesto</p>
+    <div class="footer-logo">
+        <a href="https://github.com/ErnestoSESB" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/silvio-ernesto-67924b25b/" target="_blank">LinkedIn</a>
+        <a href="https://www.instagram.com/e.silvio_/?__pwa=1" target="_blank">Instagram</a>
+    </div>
+</footer>
+
+<script>
+/* JS embutido */
+const navToggle = document.getElementById('nav-toggle');
+const navMenu = document.getElementById('nav-menu');
+
+navToggle.addEventListener('click', function() {
+    navMenu.classList.toggle('show');
+    this.classList.toggle('active');
+});
+
+const navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        navMenu.classList.remove('show');
+        navToggle.classList.remove('active');
+    });
+});
+
+window.addEventListener('scroll', function() {
+    const header = document.getElementById('header');
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            const headerHeight = document.querySelector('.landing-header').offsetHeight;
+            const targetPosition = target.offsetTop - headerHeight;
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+</script>
+
+</body>
+</html>
