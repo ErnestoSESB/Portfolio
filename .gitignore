@@ -219,3 +219,8 @@ image
 
 # Streamlit
 .streamlit/secrets.toml
+
+.backup
+.backup.txt
+backup
+backup.txt

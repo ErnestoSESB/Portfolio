@@ -114,9 +114,9 @@ html {
     top: 100%;
     left: 0;
     right: 0;
-    background: white;
+    background: #03031d;
     padding: 1rem;
-    border-top: 1px solid #e5e7eb;
+    border-top: 1px solid #03031d;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -402,8 +402,6 @@ html {
    Sections
    =========================== */
 
-
-
 @media (min-width: 768px) {
     .project,
     .about {
@@ -470,26 +468,7 @@ html {
 
     
 }
-@media (max-width: 768px) {
 
-    .project-card {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "title"
-            "text"
-            "image";
-    }
-
-    .card-title {
-        text-align: center;
-        grid-area: title;
-        grid-column: auto;
-    }
-
-    .project-image {
-        width: 100%;
-    }
-}
 
 .project-card {
     display: grid;
@@ -504,6 +483,38 @@ html {
     border: 1px solid #e5e7eb;
     margin-bottom: 2rem;
     align-items: center;
+    word-break: break-word;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+
+    .project-card {
+        display: grid; 
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "title"
+            "text"
+            "image";
+        gap: 10px;        
+    }
+
+    .card-title {
+        text-align: center;
+        grid-area: title;
+        grid-column: auto;
+    }
+
+    .project-image {
+        grid-area: image;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .card-text{
+        grid-area: text;
+    }
 }
 
 .project-card.main-card {
@@ -797,12 +808,19 @@ html {
     border-radius: 1rem;
     padding: 2rem;
     text-align: center;
+
 }
 
 .about-footer-text {
     font-size: 1.125rem;
     color: #e5e7eb;
     line-height: 1.8;
+}
+@media (max-width: 767px) {
+    .about-footer-text {
+        font-size: 0.9rem; 
+        word-break: break-word; 
+    }
 }
 
 /* ===========================
@@ -930,4 +948,29 @@ html {
     .team-grid {
         grid-template-columns: 1fr;
     }
+}
+#imageModal {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+#imageModal img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 10px;
+}
+img {
+    cursor: zoom-in;
+}
+
+body.modal-open {
+    overflow: hidden;
 }
