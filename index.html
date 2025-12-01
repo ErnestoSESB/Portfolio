@@ -317,6 +317,14 @@ html {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     object-fit: cover;
     border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.project-image.zoomed {
+    position: relative;
+    z-index: 10;
+    transform: scale(1.8);
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.5);
 }
 
 .feeder-image {
@@ -975,8 +983,10 @@ html {
     max-width: 90vw;
     max-height: 90vh;
     border-radius: 10px;
+    cursor: zoom-out;
 }
-img {
+
+.project-image {
     cursor: zoom-in;
 }
 
@@ -1377,7 +1387,7 @@ body.modal-open {
                             conteúdos por área de conhecimento.
                         </p>
                     </div>
-                    <img src="imagens/Enem-cronograma1.png" alt="ENEM Cronograma" class="project-image">
+                    <img src="imagens/Enem-cronograma1.png" alt="ENEM Cronograma" class="project-image zoomed">
                 </div>
             </div>
         </div>
@@ -1464,7 +1474,13 @@ body.modal-open {
         </div>
     </footer>
 
+    <!-- Modal de Imagem -->
+    <div id="imageModal" onclick="closeImage()">
+        <img id="modalImage" alt="Imagem ampliada">
+    </div>
+
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
       
         const navToggle = document.getElementById('nav-toggle');
         const navMenu = document.getElementById('nav-menu');
@@ -1491,6 +1507,15 @@ body.modal-open {
                 header.classList.remove('scrolled');
             }   
         });
+        const imgs = document.querySelectorAll('.project-image');
+            imgs.forEach(img => {
+                img.addEventListener('mouseenter', () => {
+                    img.classList.add('zoomed');
+                });
+                img.addEventListener('mouseleave', () => {
+                    img.classList.remove('zoomed');
+                });
+            });
         function openImage(src) {
             document.body.classList.add('modal-open');
             document.getElementById('modalImage').src = src;
@@ -1503,7 +1528,7 @@ body.modal-open {
             }
         document.querySelectorAll('img').forEach(img => {
             img.addEventListener('click', () => openImage(img.src));
-            });
+        });
 
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1519,9 +1544,10 @@ body.modal-open {
                 }
             });
         });
+        });
     </script>
     <div id="imageModal" onclick="closeImage()">
-    <img id="modalImage">
+        <img id="modalImage" alt="Imagem ampliada">
     </div>
 </body>
 </html>
