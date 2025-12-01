@@ -52,6 +52,24 @@ html {
    Header & Navigation (Landing Page)
    =========================== */
 
+.project-image.zoomed {
+    position: relative;
+    z-index: 10;
+    transform: scale(1.8);
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.5);
+}
+.project-image{
+    grid-area: image;
+    max-width: 100%;
+    max-height: auto;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
 .landing-header {
     position: fixed;
     top: 0;
@@ -310,22 +328,6 @@ html {
 }
 
 
-.project-image{
-    grid-area: image;
-    max-width: 100%;
-    max-height: auto;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    object-fit: cover;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-.project-image.zoomed {
-    position: relative;
-    z-index: 10;
-    transform: scale(1.8);
-    box-shadow: 0px 0px 25px rgba(0,0,0,0.5);
-}
 
 .feeder-image {
     max-width: 100%;
@@ -986,10 +988,6 @@ html {
     cursor: zoom-out;
 }
 
-.project-image {
-    cursor: zoom-in;
-}
-
 body.modal-open {
     overflow: hidden;
 }
@@ -1507,15 +1505,19 @@ body.modal-open {
                 header.classList.remove('scrolled');
             }   
         });
+
         const imgs = document.querySelectorAll('.project-image');
-            imgs.forEach(img => {
-                img.addEventListener('mouseenter', () => {
-                    img.classList.add('zoomed');
-                });
-                img.addEventListener('mouseleave', () => {
-                    img.classList.remove('zoomed');
-                });
+        imgs.forEach(img => {
+            img.addEventListener('mouseenter', () => {
+                console.log('mouseenter', img);
+                img.classList.add('zoomed');
             });
+            img.addEventListener('mouseleave', () => {
+                console.log('mouseleave', img);
+                img.classList.remove('zoomed');
+            });
+        });
+
         function openImage(src) {
             document.body.classList.add('modal-open');
             document.getElementById('modalImage').src = src;
