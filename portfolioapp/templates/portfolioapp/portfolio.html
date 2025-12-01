@@ -554,7 +554,17 @@
                 header.classList.remove('scrolled');
             }
         });
-
+        const imgs = document.querySelectorAll('.project-image');
+        imgs.forEach(img => {
+            img.addEventListener('mouseenter', () => {
+                console.log('mouseenter', img);
+                img.classList.add('zoomed');
+            });
+            img.addEventListener('mouseleave', () => {
+                console.log('mouseleave', img);
+                img.classList.remove('zoomed');
+            });
+        });
     
         function openImage(src) {
             document.body.classList.add('modal-open');

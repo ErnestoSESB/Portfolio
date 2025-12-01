@@ -300,7 +300,12 @@ html {
     margin-bottom: 1rem;
 }
 
-
+.project-image.zoomed {
+    position: relative;
+    z-index: 10;
+    transform: scale(1.8);
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.5);
+}
 .project-image{
     grid-area: image;
     max-width: 100%;
@@ -308,6 +313,8 @@ html {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     object-fit: cover;
     border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .feeder-image {
@@ -681,7 +688,6 @@ html {
 .benefit-text {
     color: #d1d5db;
 }
-
 /* ===========================
    About Section
    =========================== */
